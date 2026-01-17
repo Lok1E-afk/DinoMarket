@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(270deg, #ff0080, #7928ca, #2af598);
+    background-size: 600% 600%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+}
+
+/* Анимированный градиент */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.buy-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background: yellow;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buy-btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Карточки */
+.dinos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ffeb3b;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+}
